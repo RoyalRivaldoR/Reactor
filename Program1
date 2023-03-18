@@ -1,0 +1,31 @@
+import logo from './logo.svg';
+import './App.css';
+
+//function App() {
+//  const myName = 'Riv';
+ // const updatedAt = new Date()
+ // return (<div>
+ //   <span>Name: {myName}</span><br/>
+ //   <span>updated: {updatredAt.tolocaleString()</span>
+ // </div>
+   
+//  );
+//}
+
+function ChildComponent(props) {
+  return(<div>
+    <span>Name: {props.myName}</span><br/>
+    <span>updated: {props.updatedAt}</span>   
+  </div>);
+}
+
+function App() {
+  const myName = 'Riv';
+  const updatedAt = new Date()
+  return(<div>
+    <ChildComponent myName={myName} updatedAt={updatedAt.toLocaleString()}></ChildComponent>
+  </div>);
+}
+
+
+export default App;

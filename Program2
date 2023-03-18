@@ -1,0 +1,23 @@
+import logo from './logo.svg';
+import './App.css';
+import { useState } from 'react';
+
+function App(props){
+  let countVariable = useState(100);
+  let count = countVariable[0];
+  let setCount = countVariable[1];
+  function onClickHandler(){
+    count = count+1;
+    setCount(count);
+    console.log('clicked',count);
+  }
+  return(<div>
+    <div onClick={onClickHandler}>click here to increase count</div>
+    <div>Counter: {count}</div>
+  </div>);
+}
+
+
+
+
+export default App;
